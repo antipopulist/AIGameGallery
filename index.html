@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Game Gallery</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root { --card-bg:#1e1e1e; --accent:#4adf86; }
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;
+         background:#111;color:#eee;display:flex;flex-direction:column;
+         align-items:center;min-height:100vh}
+    h1{margin:2rem 0 1rem;text-align:center}
+    .grid{display:grid;gap:1.5rem;padding:0 1rem 3rem;
+          grid-template-columns:repeat(auto-fit,minmax(260px,1fr));width:100%;max-width:1100px}
+    .card{background:var(--card-bg);border-radius:14px;padding:1.5rem;
+          box-shadow:0 4px 12px #0006;display:flex;flex-direction:column}
+    .card h2{margin:0 0 .5rem;font-size:1.3rem}
+    ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:auto;padding:1rem 0 .5rem;font-size:.85rem;opacity:.6}
+  </style>
+</head>
+<body>
+  <h1>AI-Generated Browser Games</h1>
+
+  <div class="grid">
+    <!-- SNAKE -->
+    <div class="card">
+      <h2>Snake</h2>
+      <ul>
+        <li><a href="games/snake/gpt4o/">Play – ChatGPT&nbsp;version</a></li>
+        <li><a href="games/snake/gemini/">Play – Gemini&nbsp;version</a></li>
+      </ul>
+    </div>
+
+    <!-- TETRIS -->
+    <div class="card">
+      <h2>Tetris</h2>
+      <ul>
+        <li><a href="games/tetris/gpt4o/">Play – ChatGPT&nbsp;version</a></li>
+        <li><a href="games/tetris/gemini/">Play – Gemini&nbsp;version</a></li>
+      </ul>
+    </div>
+
+    <!-- ADD MORE GAMES HERE -->
+    <!--
+    <div class="card">
+      <h2>Minesweeper</h2>
+      <ul>
+        <li><a href="games/minesweeper/gpt4o/">Play – ChatGPT version</a></li>
+        <li><a href="games/minesweeper/gemini/">Play – Gemini version</a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+
+  <footer>© 2025 AI Game Gallery</footer>
+</body>
+</html>
