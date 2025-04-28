@@ -1,0 +1,20 @@
+/* ---------- common header ---------- */
+#ai-gallery-bar{
+  position:fixed;top:0;left:0;right:0;
+  background:#111;padding:.6rem 1rem;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 2px 8px #0008;font-family:system-ui,sans-serif;
+  z-index:9999;
+}
+#ai-gallery-bar a,#ai-gallery-bar button{
+  color:#4adf86;background:#222;border:none;padding:.4rem .9rem;
+  border-radius:6px;font-size:.9rem;cursor:pointer;text-decoration:none;
+}
+#ai-gallery-bar a:hover,#ai-gallery-bar button:hover{background:#333}
+
+#ai-gallery-about{
+  position:fixed;top:3.2rem;right:1rem;max-width:320px;
+  background:#222;color:#eee;padding:1rem;border-radius:8px;
+  box-shadow:0 4px 12px #000c;font-size:.9rem;line-height:1.4;
+  display:none;z-index:9998;
+}

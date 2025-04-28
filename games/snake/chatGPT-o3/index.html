@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/AIGameGallery/assets/common.css">
   <title>Snake Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
@@ -36,6 +37,16 @@
     button:hover {filter: brightness(1.1);}
   </style>
 </head>
+<script>
+  /* optional per-page notes */
+  window.AI_GAME_NOTES = `
+    <strong>About this Snake build</strong><br>
+    • Model: ChatGPT o3<br>
+    • First pass, minimal refactor<br>
+    • Uses wrap-around instead of walls.
+  `;
+</script>
+<script src="/AIGameGallery/assets/common.js"></script>
 <body>
   <canvas id="game" width="400" height="400" tabindex="0"></canvas>
   <div id="score">Score: 0</div>

@@ -1,0 +1,14 @@
+<!-- put this inside <head> -->
+<link rel="stylesheet" href="/AIGameGallery/assets/common.css">
+
+<!-- put this just before </body> -->
+<script>
+  /* optional per-page notes */
+  window.AI_GAME_NOTES = `
+    <strong>About this Snake build</strong><br>
+    • Model: ChatGPT o3<br>
+    • First pass, minimal refactor<br>
+    • Uses wrap-around instead of walls.
+  `;
+</script>
+<script src="/AIGameGallery/assets/common.js"></script>
