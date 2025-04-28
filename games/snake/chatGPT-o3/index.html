@@ -42,16 +42,22 @@
   <div id="score">Score: 0</div>
   <button id="restart" hidden>Restart</button>
   
-  <script>
-  /* optional per-page notes */
-  window.AI_GAME_NOTES = `
-    <strong>About this Snake build</strong><br>
-    • Model: ChatGPT o3<br>
-    • First pass, minimal refactor<br>
-    • Uses wrap-around instead of walls.
-  `;
-</script>
-<script src="/AIGameGallery/assets/common.js"></script>
+  <!-- Hidden notes block (NOT shown until button clicked) -->
+  <section id="ai-about-content" style="display:none">
+    <h3>About this Snake build</h3>
+    <p>This version was produced by <strong>ChatGPT o3</strong>.  
+       It keeps the classic wrap-around mechanic instead of walls,  
+       and the speed is locked at 100 ms per frame.</p>
+
+    <p>Plans for v2:</p>
+    <ul>
+      <li>Touch controls for mobile</li>
+      <li>Score persistence via localStorage</li>
+    </ul>
+  </section>
+
+  <!-- shared bar JS -->
+  <script src="../../assets/common.js"></script>
 
   <script>
     (() => {
