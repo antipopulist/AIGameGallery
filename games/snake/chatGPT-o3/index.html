@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Snake Game</title>
-  <link rel="stylesheet" href="/AIGameGallery/assets/common.css">
+  <link rel="stylesheet" href="../../../assets/common.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {font-family: system-ui, sans-serif;}
@@ -56,8 +56,11 @@
     </ul>
   </section>
 
+  <audio id="crunch-sound" src="../crunch.mp3" preload="auto"></audio>
+  <audio id="gameover-sound" src="../gameover.mp3" preload="auto"></audio>
+
   <!-- shared bar JS -->
-  <script src="/AIGameGallery/assets/common.js"></script>
+  <script src="../../../assets/common.js"></script>
 
   <script>
     (() => {
@@ -65,6 +68,8 @@
       const ctx = canvas.getContext('2d');
       const gridSize = 20; // cell size in px
       const tileCount = canvas.width / gridSize;
+      const crunchSound = document.getElementById('crunch-sound');
+      const gameoverSound = document.getElementById('gameover-sound');
 
       let snake;
       let food;
@@ -125,6 +130,8 @@
         // check food collision
         if (head.x === food.x && head.y === food.y) {
           score++;
+          crunchSound.currentTime = 0;
+          crunchSound.play();
           console.log('Ate food at', JSON.stringify(head), 'New score', score);
           scoreEl.textContent = 'Score: ' + score;
           placeFood();
@@ -160,6 +167,8 @@
 
       function gameOver() {
         clearInterval(gameInterval);
+        gameoverSound.currentTime = 0;
+        gameoverSound.play();
         console.error('--- Game Over ---', 'Final score:', score);
         ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
