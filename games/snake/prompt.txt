@@ -1,0 +1,19 @@
+Write a standalone HTML file that implements the classic Snake game using only plain JavaScript and the HTML5 <canvas> element. The page should:
+
+1. Create a square canvas (e.g. 400×400px) centered on the page.
+2. Draw the snake as a series of filled blocks that moves by 1 block per “tick.”
+3. Use the arrow keys to control the snake’s direction (no reverse on a single press).
+4. Randomly place a “fruit” block on the grid; when the snake’s head reaches it:
+   - Play the sound “crunch.mp3” (located at src="../crunch.mp3")
+   - Grow the snake by one block
+   - Increment and display the score in the top corner
+5. Detect collisions with walls or the snake’s own body:
+   - Stop the game loop
+   - Play the sound “gameover.mp3” (located at src="../gameover.mp3")
+   - Display “Game Over” and the final score
+6. Preload and play both audio files using the Audio API:
+   const eatSound = new Audio('../crunch.mp3');
+   const dieSound = new Audio('../gameover.mp3');
+7. Keep styling minimal (inline CSS is fine) and include all code in one HTML file.
+8. At the end, ensure the code is copy‑paste‑ready: one .html file that “just works” when opened in a browser.
+
